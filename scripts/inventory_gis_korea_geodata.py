@@ -17,6 +17,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
+PROJECT_ROOT = Path(os.environ.get(
+    "AQUAAGENT_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
+
 DEFAULT_GEODATA_ROOT = Path(os.environ.get("KOREA_GEODATA_ROOT", "geodata"))
 DEFAULT_OUTPUT = PROJECT_ROOT / "data" / "processed" / "geodata_inventory.csv"
 DEFAULT_LOG = PROJECT_ROOT / "logs" / "gate1_geodata_inventory.md"

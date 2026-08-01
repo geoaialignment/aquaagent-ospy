@@ -11,6 +11,31 @@ Final clean manuscript identified by content comparison, not filename:
 It supersedes the otherwise byte-similar `Park et al., COMPAG, 2026.docx` copies by two
 substantive hunks: a trimmed keyword list and an expanded competing-interest disclosure.
 
+## Code scope actually published
+
+Verified by inspection of the committed tree, not by intent:
+
+- 13 Python scripts are included: acquisition (`fetch_weather_nasa_power.py`,
+  `fetch_open_access_pdfs.py`), site selection and GIS inventory
+  (`select_korea_candidate_sites.py`, `inventory_gis_korea_geodata.py`), GEE verification
+  (`run_gee_extended_validation.py`), memo generation and evaluation
+  (`generate_action_memo.py`, `evaluate_memo_faithfulness.py`,
+  `run_memo_adversarial_audit.py`), sensitivity and benchmark analyses
+  (`run_pm_eto_sensitivity.py`, `run_nebraska_maize_benchmark.py`), figure generation
+  (`make_figures.py`, `make_graphical_abstract.py`), and an import gate
+  (`check_aquacrop_ospy_import.py`).
+- `AquaCropModel` is called only by `run_pm_eto_sensitivity.py` and
+  `run_nebraska_maize_benchmark.py`.
+- **No included script imports `pymoo`**, and no NSGA-II optimizer implementation is
+  present. `generate_action_memo.py` reads pre-computed Pareto fronts.
+- The primary Korean scenario harness is not present either. A search of the source
+  working tree found no `pymoo` import anywhere in it, so the optimizer source lives
+  outside the tree this repository was assembled from; it was not withheld selectively.
+
+The README and `scripts/README.md` were corrected on 2026-08-01 to state this scope
+explicitly after an independent review found they implied a runnable harness and
+optimizer were included.
+
 ## What is intentionally absent
 
 No manuscript or submission documents (DOCX/PDF), cover or reply letters, journal
