@@ -1,0 +1,9 @@
+soil_shallow_value,aquacrop_class,field_capacity,wilting_point,ksat_mm_day,note
+사양토,Sandy loam,0.23,0.10,400,Gate 0 mapping; verify against source table before manuscript
+세사양토,Sandy loam,0.23,0.10,400,Gate 0 mapping; verify against source table before manuscript
+양질세사토,Sandy loam,0.23,0.10,400,Gate 0 mapping; verify against source table before manuscript
+양질조사토,Loamy sand,0.18,0.08,1000,Gate 0 mapping; verify against source table before manuscript
+양토,Loam,0.31,0.14,200,Gate 0 mapping; verify against source table before manuscript
+미사질양토,Silt loam,0.33,0.13,130,Gate 0 mapping; verify against source table before manuscript
+미사질식양토,Silty clay loam,0.40,0.23,50,Gate 0 mapping; verify against source table before manuscript
+하상퇴적물,UNMAPPED,,,,Use SoilGrids fallback for selected point

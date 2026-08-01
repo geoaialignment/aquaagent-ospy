@@ -1,0 +1,11 @@
+case,year,perturb,th_fc_x,th_wp_x,strategy,yield_t_ha,irrigation_mm,th_fc_y,th_wp_y,yield_t_ha_reconstructed,irrigation_mm_reconstructed,_merge,yield_delta,irrigation_delta,row_pass
+case1_gimje,2019,FC+15%,0.448,0.23,deficit_SMT50,7.016,50.0,0.448,0.23,7.016,50.0,both,0.0,0.0,True
+case1_gimje,2019,FC+15%,0.448,0.23,rainfed,6.65,0.0,0.448,0.23,6.65,0.0,both,0.0,0.0,True
+case1_gimje,2019,FC-15%,0.331,0.23,deficit_SMT50,7.193,121.0,0.332,0.23,7.193,121.0,both,0.0,0.0,True
+case1_gimje,2019,FC-15%,0.331,0.23,rainfed,5.691,0.0,0.332,0.23,5.691,0.0,both,0.0,0.0,True
+case1_gimje,2019,WP+15%,0.39,0.264,deficit_SMT50,7.116,125.0,0.39,0.265,7.116,125.0,both,0.0,0.0,True
+case1_gimje,2019,WP+15%,0.39,0.264,rainfed,5.847,0.0,0.39,0.265,5.847,0.0,both,0.0,0.0,True
+case1_gimje,2019,WP-15%,0.39,0.196,deficit_SMT50,7.014,50.0,0.39,0.196,7.014,50.0,both,0.0,0.0,True
+case1_gimje,2019,WP-15%,0.39,0.196,rainfed,6.635,0.0,0.39,0.196,6.635,0.0,both,0.0,0.0,True
+case1_gimje,2019,base,0.39,0.23,deficit_SMT50,6.915,75.0,0.39,0.23,6.915,75.0,both,0.0,0.0,True
+case1_gimje,2019,base,0.39,0.23,rainfed,6.321,0.0,0.39,0.23,6.321,0.0,both,0.0,0.0,True

@@ -1,0 +1,115 @@
+# AquaAgent-OSPy Case Registry
+# Status: PRODUCTION — Gate 4 GEE-confirmed
+# Updated: 2026-05-02 by claude-1
+
+# CORRECTION HISTORY:
+# Original polygon centroid coordinates (Chungcheongnam-do/Jeollanam-do) failed GEE G1 check
+# (ESA WorldCover: Grass + Water). Replaced with satellite-confirmed cropland.
+
+cases:
+  - id: case1_gimje
+    description: "Paddy rice, Gimje-si, Jeollabuk-do, Korea"
+    route: "korea_rice_primary"
+    validation_level: "scenario_context_validated"
+    claim_scope: "applied_DSS_case; not site-specific field validation"
+    region: "Jeollabuk-do, Gimje-si"
+    lat: 35.754
+    lon: 126.898
+    gee_confirmation: "DW crops_p=0.571 PASS | NDVI rice phenology PASS | T MAE=0.8°C PASS | P corr=0.878 PASS"
+    gee_status: "ALL_PASS"
+    soil_type: "ClayLoam"
+    soil_source: "HSG=C (soil_drn.gpkg nearest polygon) → ClayLoam; th_fc=0.390, th_wp=0.230"
+    crop: "PaddyRice"
+    planting_date: "05/25"
+    sim_end_date: "10/15"
+    years:
+      - year: 2019
+        weather_file: "data/processed/weather_aquacrop_case1_gimje_2019.csv"
+        weather_source: "NASA POWER Daily API + Hargreaves-Samani ETo"
+        grow_precip_mm: 675.0
+        grow_eto_mm: 677.5
+        climate_type: "near_balanced (precip≈ETo)"
+        scenario_results: "data/processed/scenario_results_confirmed_sites.csv"
+        pareto_front: "data/processed/pareto_front_case1_gimje_2019.csv"
+        pareto_safety_note: "Pareto max-yield solution=205.8mm > 200mm threshold → HIGH_IRR flag"
+        results_verified: true
+      - year: 2022
+        weather_file: "data/processed/weather_aquacrop_case1_gimje_2022.csv"
+        weather_source: "NASA POWER Daily API + Hargreaves-Samani ETo"
+        grow_precip_mm: 736.1
+        grow_eto_mm: 672.6
+        climate_type: "moderate_surplus"
+        scenario_results: "data/processed/scenario_results_confirmed_sites.csv"
+        results_verified: true
+
+  - id: case2_hampyeong
+    description: "Paddy rice, Hampyeong-gun, Jeollanam-do, Korea"
+    route: "korea_rice_primary"
+    validation_level: "scenario_context_validated"
+    claim_scope: "applied_DSS_case_with_precipitation_warning; not site-specific field validation"
+    region: "Jeollanam-do, Hampyeong-gun"
+    lat: 35.07
+    lon: 126.54
+    gee_confirmation: "DW crops_p=0.506 PASS | NDVI rice phenology PASS | T MAE=0.92°C PASS | P corr=0.667 WARN"
+    gee_status: "G1_G2_G3_PASS_G4_WARN"
+    gee_note: "G4 WARN: ERA5-Land vs NASA POWER precipitation corr=0.667 in 2022 — above-average monsoon divergence. Flag in paper uncertainty section."
+    soil_type: "ClayLoam"
+    soil_source: "HSG=C (soil_drn.gpkg nearest polygon) → ClayLoam; th_fc=0.390, th_wp=0.230"
+    crop: "PaddyRice"
+    planting_date: "05/25"
+    sim_end_date: "10/15"
+    years:
+      - year: 2015
+        weather_file: "data/processed/weather_aquacrop_case2_hampyeong_2015.csv"
+        weather_source: "NASA POWER Daily API + Hargreaves-Samani ETo"
+        grow_precip_mm: 578.0
+        grow_eto_mm: 475.0
+        climate_type: "dry_relative (below Hampyeong average)"
+        scenario_results: "data/processed/scenario_results_soilgrids_corrected.csv"
+        results_verified: true
+      - year: 2019
+        weather_file: "data/processed/weather_aquacrop_case2_hampyeong_2019.csv"
+        weather_source: "NASA POWER Daily API + Hargreaves-Samani ETo"
+        grow_precip_mm: 823.8
+        grow_eto_mm: 476.9
+        climate_type: "wet_year"
+        scenario_results: "data/processed/scenario_results_confirmed_sites.csv"
+        results_verified: true
+      - year: 2022
+        weather_file: "data/processed/weather_aquacrop_case2_hampyeong_2022.csv"
+        weather_source: "NASA POWER Daily API + Hargreaves-Samani ETo"
+        grow_precip_mm: 723.6
+        grow_eto_mm: 474.8
+        climate_type: "moderate_surplus"
+        scenario_results: "data/processed/scenario_results_confirmed_sites.csv"
+        pareto_front: "data/processed/pareto_front_case2_hampyeong_2022.csv"
+        results_verified: true
+
+fallback_routes:
+  - id: thailand_rice_fallback
+    route: "fallback_external_rice_benchmark"
+    validation_level: "benchmark_candidate"
+    claim_scope: "activate only if Korea rice loses defensible evidence or if external rice replication is required"
+    status: "planned"
+    pivot_trigger: "Korea rice fails weather, soil, land-cover, benchmark, or management-assumption checks"
+  - id: spain_cotton_fallback
+    route: "fallback_non_rice_benchmark"
+    validation_level: "failed_probe_not_validated"
+    claim_scope: "do not cite as validation until calibrated benchmark is reproduced"
+    status: "deferred"
+    pivot_trigger: "only reconsider with calibrated cotton parameters and source-backed benchmark"
+  - id: tunis_wheat_tutorial
+    route: "fallback_workflow_smoke_test"
+    validation_level: "workflow_only"
+    claim_scope: "software route only; not an external validation benchmark"
+    status: "available"
+    pivot_trigger: "use for debugging if target crop routes fail"
+  - id: nebraska_maize_supplementary
+    route: "supplementary_portability"
+    validation_level: "workflow_transferability_only"
+    claim_scope: "supplementary software portability; not main agronomic evidence"
+    status: "executed_limited"
+    pivot_trigger: "do not promote without calibration and official benchmark closure"
+
+# Python env: conda activate newproj (3.11.13, aquacrop 3.0.12, pymoo 0.6.1.6)
+# GEE: GEE Python API initialization

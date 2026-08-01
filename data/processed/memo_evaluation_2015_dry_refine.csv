@@ -1,0 +1,2 @@
+case_id,year,memo_file,F1_traceability,F1_note,F2_no_hallucination,F2_note,F3_uncertainty,F3_note,F4_safety_flags,F4_note,F5_actionability,F5_note,pass_count,pass_rate,categorical_failure,n_memo_nums,n_valid_nums
+case1_gimje,2015,experiments/memos/memo_case1_gimje_2015_dry.md,True,all numeric claims traceable,True,no hallucinated numbers,True,uncertainty stated,True,"safety flags ['HIGH_IRRIGATION', 'HIGH_IRRIGATION'] should appear in memo",True,depth + timing both present,5,1.0,False,16,189

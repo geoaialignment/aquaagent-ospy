@@ -1,0 +1,3 @@
+test,strategy,saved_normal_yield,saved_stressed_yield,saved_delta,saved_irrigation_mm,current_gimje_normal_yield,current_gimje_normal_delta,legacy_chungnam_normal_yield,legacy_chungnam_normal_delta,saved_gapped_yield_reconstructed,saved_gapped_yield_delta,saved_gapped_irrigation_reconstructed,saved_gapped_irrigation_delta,current_gimje_gate_pass,legacy_saved_file_pass
+14day_july_gap,rainfed,6.704,6.480075648006906,-0.2239243519930935,0.0,6.321407,-0.38259346681541384,6.703983,-1.747812562946649e-05,6.480076,4.110034801385609e-08,0.0,0.0,False,True
+14day_july_gap,deficit_SMT50,7.217,7.21960204198471,0.0026020419847103,50.0,6.91506,-0.3019396769888285,7.217079,7.866476871409844e-05,7.219602,5.909621236810381e-09,50.0,0.0,False,True

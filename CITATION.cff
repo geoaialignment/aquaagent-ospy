@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or its artifacts, please cite the associated paper."
+title: "AquaAgent-OSPy: An Auditable LLM Tool-Agent System for Simulation-Grounded Irrigation Decision Support"
+abstract: >-
+  AquaAgent-OSPy is an A4-class code-executing LLM tool-agent that orchestrates
+  AquaCrop-OSPy irrigation scenario simulations, NSGA-II multi-objective optimization,
+  Google Earth Engine site context verification, and an illustrative seasonal-irrigation
+  safety checker to generate auditable action memos with full tool provenance.
+type: software
+authors:
+  - family-names: Park
+    given-names: Eungyu
+    affiliation: "School of Earth System Sciences, Kyungpook National University; GeoAI Alignment, Inc."
+  - family-names: Kim
+    given-names: Taeyu
+    affiliation: "School of Earth System Sciences, Kyungpook National University; GeoAI Alignment, Inc."
+  - family-names: Park
+    given-names: Jangwon
+    affiliation: "School of Earth System Sciences, Kyungpook National University; GeoAI Alignment, Inc."
+keywords:
+  - AquaCrop-OSPy
+  - irrigation decision support
+  - large language model tool-agent
+  - agentic AI
+  - water productivity
+preferred-citation:
+  type: article
+  title: "AquaAgent-OSPy: An Auditable LLM Tool-Agent System for Simulation-Grounded Irrigation Decision Support"
+  authors:
+    - family-names: Park
+      given-names: Eungyu
+    - family-names: Kim
+      given-names: Taeyu
+    - family-names: Park
+      given-names: Jangwon
+  journal: "Computers and Electronics in Agriculture"
+  year: 2026
+  notes: "Manuscript COMPAG-D-26-04013; under review. No DOI assigned yet."

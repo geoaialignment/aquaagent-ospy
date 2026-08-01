@@ -1,0 +1,21 @@
+case,year,desc,strategy,yield_t_ha,irrigation_mm,grow_precip_mm,WP_kg_m3
+case1_gimje,2019,Gimje 전북 (dry),rainfed,6.321,0.0,675.0,0.937
+case1_gimje,2019,Gimje 전북 (dry),fixed_7d_80pct,7.268,154.0,675.0,0.877
+case1_gimje,2019,Gimje 전북 (dry),deficit_SMT50,6.915,75.0,675.0,0.922
+case1_gimje,2019,Gimje 전북 (dry),deficit_SMT30,6.677,50.0,675.0,0.921
+case1_gimje,2019,Gimje 전북 (dry),full_SMT80,7.318,208.3,675.0,0.829
+case1_gimje,2022,Gimje 전북 (wet),rainfed,6.413,0.0,736.1,0.871
+case1_gimje,2022,Gimje 전북 (wet),fixed_7d_80pct,7.309,100.2,736.1,0.874
+case1_gimje,2022,Gimje 전북 (wet),deficit_SMT50,6.548,25.0,736.1,0.86
+case1_gimje,2022,Gimje 전북 (wet),deficit_SMT30,6.413,0.0,736.1,0.871
+case1_gimje,2022,Gimje 전북 (wet),full_SMT80,7.427,130.8,736.1,0.857
+case2_hampyeong,2019,Hampyeong 전남 (wet),rainfed,7.225,0.0,823.8,0.877
+case2_hampyeong,2019,Hampyeong 전남 (wet),fixed_7d_80pct,7.311,125.3,823.8,0.77
+case2_hampyeong,2019,Hampyeong 전남 (wet),deficit_SMT50,7.276,50.0,823.8,0.833
+case2_hampyeong,2019,Hampyeong 전남 (wet),deficit_SMT30,7.225,0.0,823.8,0.877
+case2_hampyeong,2019,Hampyeong 전남 (wet),full_SMT80,7.324,137.6,823.8,0.762
+case2_hampyeong,2022,Hampyeong 전남 (dry),rainfed,7.295,0.0,723.6,1.008
+case2_hampyeong,2022,Hampyeong 전남 (dry),fixed_7d_80pct,7.417,94.6,723.6,0.907
+case2_hampyeong,2022,Hampyeong 전남 (dry),deficit_SMT50,7.295,0.0,723.6,1.008
+case2_hampyeong,2022,Hampyeong 전남 (dry),deficit_SMT30,7.295,0.0,723.6,1.008
+case2_hampyeong,2022,Hampyeong 전남 (dry),full_SMT80,7.434,76.4,723.6,0.929

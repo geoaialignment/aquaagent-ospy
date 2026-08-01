@@ -1,0 +1,5 @@
+case_id,year,baseline_pass_count,baseline_categorical_failure,adversarial_pass_count,adversarial_categorical_failure,adversarial_F1,adversarial_F2,detected_injected_hallucination
+case1_gimje,2019,5,False,3,True,FAIL,FAIL,True
+case1_gimje,2015,5,False,3,True,FAIL,FAIL,True
+case2_hampyeong,2022,5,False,3,True,FAIL,FAIL,True
+case2_hampyeong,2015,5,False,3,True,FAIL,FAIL,True

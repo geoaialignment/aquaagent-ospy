@@ -1,0 +1,37 @@
+{
+  "method": "Saxton-Rawls 2006 theta_33/theta_1500 equations",
+  "anti_p_hacking_note": "Method and OM handling are specified before result inspection; computed values are accepted regardless of proximity to 0.18/0.19.",
+  "organic_matter_handling": "Texture is taken from saved input_provenance.json. OM/SOC is not saved there; default run uses OM=0% mineral-soil baseline, and optional OM values are explicit sensitivity checks rather than fitting targets.",
+  "rows": [
+    {
+      "site": "case1_gimje",
+      "sand_pct": 20.9,
+      "silt_pct": 51.5,
+      "clay_pct": 27.6,
+      "organic_matter_pct": 0.0,
+      "derived_fc": 0.326063,
+      "documented_fc": 0.306,
+      "delta_fc": 0.020063,
+      "derived_wp": 0.167323,
+      "answer_key_wp": 0.18,
+      "delta_wp": -0.012677,
+      "derived_wp_fc_ratio": 0.513161,
+      "answer_key_wp_fc_ratio": 0.588235
+    },
+    {
+      "site": "case2_hampyeong",
+      "sand_pct": 20.1,
+      "silt_pct": 44.5,
+      "clay_pct": 35.4,
+      "organic_matter_pct": 0.0,
+      "derived_fc": 0.360872,
+      "documented_fc": 0.322,
+      "delta_fc": 0.038872,
+      "derived_wp": 0.21189,
+      "answer_key_wp": 0.19,
+      "delta_wp": 0.02189,
+      "derived_wp_fc_ratio": 0.587161,
+      "answer_key_wp_fc_ratio": 0.590062
+    }
+  ]
+}

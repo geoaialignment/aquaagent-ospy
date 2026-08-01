@@ -1,0 +1,10 @@
+aquacrop==3.0.12
+pymoo==0.6.1.6
+anthropic>=0.57.1
+earthengine-api>=1.7
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.0
+pyproj>=3.6
+requests>=2.31
+pyyaml>=6.0

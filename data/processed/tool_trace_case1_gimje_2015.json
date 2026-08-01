@@ -1,0 +1,174 @@
+{
+  "case_id": "case1_gimje",
+  "year": 2015,
+  "n_tool_calls": 5,
+  "trace": [
+    {
+      "tool": "load_site_context",
+      "input": {
+        "case_id": "case1_gimje"
+      },
+      "output": {
+        "region": "\uae40\uc81c\uc2dc, \uc804\ub77c\ubd81\ub3c4 (Gimje, Jeollabuk-do), Korea",
+        "lat": 35.754,
+        "lon": 126.898,
+        "soil_type": "ClayLoam",
+        "HSG": "C",
+        "crop": "PaddyRice (transplanted)",
+        "planting_date": "May 25",
+        "harvest_window": "Oct 1-15",
+        "gee_landcover": "Dynamic World crops_p=0.571; NDVI rice phenology PASS",
+        "gee_weather_check": "ERA5 vs NASA POWER: T MAE=0.8 C, monthly P corr=0.878",
+        "nearest_kma_station": "pending registry linkage",
+        "station_dist_km": "pending"
+      },
+      "timestamp": "2026-05-02T16:39:41.394520"
+    },
+    {
+      "tool": "load_weather_summary",
+      "input": {
+        "case_id": "case1_gimje",
+        "year": 2015
+      },
+      "output": {
+        "case_id": "case1_gimje",
+        "year": 2015,
+        "period": "May\u2013September",
+        "total_precip_mm": 402.6,
+        "total_eto_mm": 712.1,
+        "mean_tmax_C": 27.8,
+        "mean_tmin_C": 17.1,
+        "source": "NASA POWER Daily API (Hargreaves-Samani ETo)"
+      },
+      "timestamp": "2026-05-02T16:39:41.395442"
+    },
+    {
+      "tool": "load_scenario_table",
+      "input": {
+        "case_id": "case1_gimje",
+        "year": 2015
+      },
+      "output": {
+        "case_id": "case1_gimje",
+        "year": 2015,
+        "rows": [
+          {
+            "strategy": "rainfed",
+            "yield_t_ha": 3.856,
+            "irrigation_mm": 0.0,
+            "grow_precip_mm": 402.6,
+            "WP_kg_m3": 0.958
+          },
+          {
+            "strategy": "fixed_7d_80pct",
+            "yield_t_ha": 7.009,
+            "irrigation_mm": 238.9,
+            "grow_precip_mm": 402.6,
+            "WP_kg_m3": 1.093
+          },
+          {
+            "strategy": "deficit_SMT50",
+            "yield_t_ha": 6.633,
+            "irrigation_mm": 175.0,
+            "grow_precip_mm": 402.6,
+            "WP_kg_m3": 1.148
+          },
+          {
+            "strategy": "deficit_SMT30",
+            "yield_t_ha": 5.016,
+            "irrigation_mm": 75.0,
+            "grow_precip_mm": 402.6,
+            "WP_kg_m3": 1.05
+          },
+          {
+            "strategy": "full_SMT80",
+            "yield_t_ha": 7.168,
+            "irrigation_mm": 286.9,
+            "grow_precip_mm": 402.6,
+            "WP_kg_m3": 1.04
+          }
+        ],
+        "n_strategies": 5
+      },
+      "timestamp": "2026-05-02T16:39:41.395575"
+    },
+    {
+      "tool": "load_pareto_front",
+      "input": {},
+      "output": {
+        "n_pareto_solutions": 30,
+        "best_WP_solution": {
+          "SMT_pct": 40.0,
+          "MaxIrr_mm": 39.5,
+          "yield_t_ha": 6.2,
+          "irrigation_mm": 116.2,
+          "WP_kg_m3": 1.195
+        },
+        "max_yield_solution": {
+          "SMT_pct": 81.5,
+          "MaxIrr_mm": 10.9,
+          "yield_t_ha": 7.179,
+          "irrigation_mm": 267.2,
+          "WP_kg_m3": 1.072
+        },
+        "pareto_irrigation_range_mm": [
+          35.3,
+          267.2
+        ]
+      },
+      "timestamp": "2026-05-02T16:39:41.395724"
+    },
+    {
+      "tool": "check_safety_flags",
+      "input": {
+        "scenario_rows": [
+          {
+            "strategy": "rainfed",
+            "yield_t_ha": 3.856,
+            "irrigation_mm": 0.0
+          },
+          {
+            "strategy": "fixed_7d_80pct",
+            "yield_t_ha": 7.009,
+            "irrigation_mm": 238.9
+          },
+          {
+            "strategy": "deficit_SMT50",
+            "yield_t_ha": 6.633,
+            "irrigation_mm": 175.0
+          },
+          {
+            "strategy": "deficit_SMT30",
+            "yield_t_ha": 5.016,
+            "irrigation_mm": 75.0
+          },
+          {
+            "strategy": "full_SMT80",
+            "yield_t_ha": 7.168,
+            "irrigation_mm": 286.9
+          }
+        ]
+      },
+      "output": {
+        "n_flags": 2,
+        "flags": [
+          {
+            "strategy": "fixed_7d_80pct",
+            "flag": "HIGH_IRRIGATION",
+            "value_mm": 238.9,
+            "threshold_mm": 200,
+            "message": "Irrigation 239mm exceeds 200mm safety threshold \u2014 verify field capacity and drainage."
+          },
+          {
+            "strategy": "full_SMT80",
+            "flag": "HIGH_IRRIGATION",
+            "value_mm": 286.9,
+            "threshold_mm": 200,
+            "message": "Irrigation 287mm exceeds 200mm safety threshold \u2014 verify field capacity and drainage."
+          }
+        ]
+      },
+      "timestamp": "2026-05-02T16:39:44.782145"
+    }
+  ]
+}

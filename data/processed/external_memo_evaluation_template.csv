@@ -1,0 +1,2 @@
+evaluator_id,role_or_expertise,date_completed,memo_reviewed,q1_clarity,q2_actionability,q3_data_grounding,q4_technical_level,q5_safety_awareness,q1_q5_mean,any_required_below_3,safety_critical_omission,open_q6_comment,pass_status
+E1,,,,,,,,,,,,,PENDING

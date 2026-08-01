@@ -1,0 +1,11 @@
+strategy,yield_t_ha,irrigation_mm,WP_kg_m3,eto_method
+rainfed,6.32,0.0,6320.007,ETo_HS
+deficit_SMT30,6.675,50.0,13.349,ETo_HS
+deficit_SMT50,6.913,75.0,9.217,ETo_HS
+full_SMT80,7.318,207.7,3.523,ETo_HS
+fixed_7d_80pct,7.268,153.2,4.743,ETo_HS
+rainfed,7.047,0.0,7047.194,ETo_PM
+deficit_SMT30,7.077,25.0,28.31,ETo_PM
+deficit_SMT50,7.213,50.0,14.425,ETo_PM
+full_SMT80,7.324,164.6,4.45,ETo_PM
+fixed_7d_80pct,7.305,124.6,5.863,ETo_PM

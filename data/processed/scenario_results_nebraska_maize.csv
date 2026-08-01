@@ -1,0 +1,16 @@
+case,year,strategy,yield_t_ha,irrigation_mm,grow_precip_mm,WP_kg_m3,soil_type,nass_irrigated_target,nass_rainfed_target
+case3_nebraska_maize,2015,rainfed,14.27,0.0,650.2,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2015,deficit_SMT30,14.27,0.0,650.2,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2015,deficit_SMT50,14.27,0.0,650.2,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2015,full_SMT80,14.268,75.0,650.2,19.021,SiltLoam,12.5,9.5
+case3_nebraska_maize,2015,fixed_7d_80pct,14.266,219.8,650.2,6.491,SiltLoam,12.5,9.5
+case3_nebraska_maize,2019,rainfed,14.502,0.0,619.5,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2019,deficit_SMT30,14.502,0.0,619.5,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2019,deficit_SMT50,14.502,0.0,619.5,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2019,full_SMT80,14.502,25.0,619.5,57.985,SiltLoam,12.5,9.5
+case3_nebraska_maize,2019,fixed_7d_80pct,14.503,175.1,619.5,8.282,SiltLoam,12.5,9.5
+case3_nebraska_maize,2022,rainfed,14.36,0.0,344.2,0.0,SiltLoam,12.5,9.5
+case3_nebraska_maize,2022,deficit_SMT30,14.668,75.0,344.2,19.555,SiltLoam,12.5,9.5
+case3_nebraska_maize,2022,deficit_SMT50,14.706,150.0,344.2,9.804,SiltLoam,12.5,9.5
+case3_nebraska_maize,2022,full_SMT80,14.691,323.4,344.2,4.543,SiltLoam,12.5,9.5
+case3_nebraska_maize,2022,fixed_7d_80pct,14.691,388.8,344.2,3.778,SiltLoam,12.5,9.5

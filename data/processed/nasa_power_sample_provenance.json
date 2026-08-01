@@ -1,0 +1,19 @@
+{
+  "generated_utc": "2026-05-02T06:47:53.572343+00:00",
+  "source": "NASA POWER daily point API",
+  "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX%2CT2M_MIN%2CPRECTOTCORR%2CWS2M%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=127.0&latitude=36.5&start=20220101&end=20220110&format=JSON",
+  "latitude": 36.5,
+  "longitude": 127.0,
+  "start": "20220101",
+  "end": "20220110",
+  "parameters": [
+    "T2M_MAX",
+    "T2M_MIN",
+    "PRECTOTCORR",
+    "WS2M",
+    "RH2M",
+    "ALLSKY_SFC_SW_DWN"
+  ],
+  "output_csv": "data/processed/nasa_power_sample_daily.csv",
+  "aqua_crop_note": "Compute ReferenceET locally before prepare_weather; do not treat groundwater_climate.csv as primary forcing without Tmax/Tmin."
+}
